@@ -3,7 +3,52 @@
 
 <head>
 	<title>Любовка</title>
-	<link href="styles.css" rel="stylesheet">
+	<!-- <link href="styles.css" rel="stylesheet"> -->
+	<style>
+		body {
+			background-color: #ffe5b4;
+			text-align: center;
+		}
+
+		button {
+			position: absolute;
+			font-size: 1.5em;
+			color: #f1e6c1;
+			box-shadow: 1px 1px 5px black;
+			background-color: #3b392fa2;
+			height: 6vh;
+			width: 125px;
+			border-radius: 10px;
+		}
+
+		#noButton {
+			position: absolute;
+			top: 57vh;
+			left: 51vw;
+			transition: 0.3s;
+		}
+
+		#yesButton {
+			top: 57vh;
+			left: 42vw;
+		}
+
+		p {
+			font-size: 24pt;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			text-align: center;
+			position: relative;
+		}
+
+		img {
+			position: relative;
+			height: 250px;
+		}
+
+		.main-img {
+			text-align: center;
+		}
+	</style>
 </head>
 
 <body>
@@ -13,7 +58,40 @@
 	<p id="text">Я Тебя очень сильно люблю!<br>А ты меня любишь?)</p>
 	<button onclick="yesButtonPressed()" id="yesButton">Ага&#128151;</button>
 	<button id="noButton">Неа&#128148;</button>
-	<script src="script.js"></script>
+	<!-- <script src="script.js"></script> -->
+	<script>
+		const noButton = document.getElementById("noButton");
+		const yesButton = document.getElementById("yesButton");
+		const centerImg = document.getElementById("center-img");
+		let yesPressedCounter = 0;
+
+		noButton.addEventListener("mouseover", (e) => {
+			let buttonWidth = parseInt(getComputedStyle(noButton).width, 10);
+			let buttonHeight = parseInt(getComputedStyle(noButton).height, 10);
+			let prevX = parseInt(getComputedStyle(noButton).left, 10)
+			let prevY = parseInt(getComputedStyle(noButton).top, 10)
+			let x = getRand(buttonWidth / 2, window.innerWidth - buttonWidth);
+			let y = getRand(0, window.innerHeight - buttonHeight);
+			console.log(window.innerWidth + ',' + window.innerHeight)
+			console.log(prevX + ',' + prevY);
+			console.log(x + ',' + y);
+			noButton.style.left = x + 'px';
+			noButton.style.top = y + 'px';
+		});
+
+		function getRand(min, max) {
+			return Math.floor(Math.random() * (max - min) + min);
+		}
+
+		yesButton.addEventListener("click", (e) => {
+			yesPressedCounter++;
+			if (yesPressedCounter == 1) {
+				let text = document.getElementById("text");
+				text.innerHTML = "Так будем мы вместе, так будем мы рядом<br>с тобою всегда!"
+				centerImg.setAttribute("src", "./resources/bear-kiss-bear-kisses.gif");
+			}
+		})
+	</script>
 </body>
 
 </html>
