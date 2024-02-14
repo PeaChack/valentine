@@ -1,4 +1,4 @@
-const button = document.getElementById("escapeButton");
+const button = document.getElementById("noButton");
 
 button.addEventListener("mouseover", (e) => {
 	let buttonWidth = parseInt(getComputedStyle(button).width, 10);

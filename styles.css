@@ -1,28 +1,26 @@
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	user-select: none;
+
+body {
+	background-color: #ffe5b4;
 }
 
-#escapeButton {
+button{
 	position: relative;
-	display: flexbox;
-	height: 7rem;
-	width: 14rem;
-	transition: 0.3s;
-	top: 50vh;
-	left: 50vw;
+	font-size: 1.5em;
+	color: #f1e6c1;
+	/* box-shadow: 1px 1px 5px black; */
+	background-color:#3b392fa2;
+	height: 6vh;
+	width: 8vw;
+	border-radius: 10px;
 }
 
-.someButton {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	height: 4rem;
-	width: 10rem;
-	font-size: 1.5rem;
-	box-shadow: 1px 1px 5px black;
-	background-color: white;
+#noButton{
+	left: 50vw;
+	top: 50vh;
+	transition: 0.3s;
+}
+
+#yesButton{
+	left: 50vw;
+	top: 50vh;
 }
