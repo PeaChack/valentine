@@ -1,33 +1,43 @@
-
 body {
 	background-color: #ffe5b4;
+	text-align: center;
 }
 
-button{
-	position: relative;
+button {
+	position: absolute;
 	font-size: 1.5em;
 	color: #f1e6c1;
 	box-shadow: 1px 1px 5px black;
-	background-color:#3b392fa2;
+	background-color: #3b392fa2;
 	height: 6vh;
-	width: 8vw;
+	width: 125px;
 	border-radius: 10px;
 }
 
-#noButton{
-	left: 42vw;
-	top: 70vh;
+#noButton {
+	position: absolute;
+	top: 57vh;
+	left: 51vw;
 	transition: 0.3s;
 }
 
-#yesButton{
-	left: 41.5vw;
-	top: 70vh;
+#yesButton {
+	top: 57vh;
+	left: 42vw;
 }
-p{
+
+p {
 	font-size: 24pt;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	text-align: center;
 	position: relative;
-	top: 65vh;
+}
+
+img {
+	position: relative;
+	height: 250px;
+}
+
+.main-img {
+	text-align: center;
 }
