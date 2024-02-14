@@ -7,7 +7,7 @@ button{
 	position: relative;
 	font-size: 1.5em;
 	color: #f1e6c1;
-	/* box-shadow: 1px 1px 5px black; */
+	box-shadow: 1px 1px 5px black;
 	background-color:#3b392fa2;
 	height: 6vh;
 	width: 8vw;
@@ -15,12 +15,19 @@ button{
 }
 
 #noButton{
-	left: 50vw;
-	top: 50vh;
+	left: 42vw;
+	top: 70vh;
 	transition: 0.3s;
 }
 
 #yesButton{
-	left: 50vw;
-	top: 50vh;
+	left: 41.5vw;
+	top: 70vh;
+}
+p{
+	font-size: 24pt;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-align: center;
+	position: relative;
+	top: 65vh;
 }
