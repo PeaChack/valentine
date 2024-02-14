@@ -1,0 +1,17 @@
+.container {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+#escapeButton {
+	position:absolute;
+	transition: transform 0.5s ease-in-out;
+	color:red;
+	margin: 20px;
+	top: 50vh;
+	right: 50vw;
+}
+
+#escapeButton:hover{
+	transform: translate (50%,50%);
+}
